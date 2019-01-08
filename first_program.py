@@ -1,3 +1,4 @@
+#Ground Shipping cost calculation
 def ground_shipping(weight):
   if (weight <= 2.0):
     cost = weight*1.50
@@ -13,6 +14,7 @@ def ground_shipping(weight):
 ground_shipping_cost = ground_shipping(8.4)
 print("The grounds shipping cost is:", ground_shipping_cost)
   
+#Drone Shipping cost calculation
 def drone_shipping(weight):
     if (weight < 2.0):
       cost = weight * 4.50
@@ -28,7 +30,7 @@ def drone_shipping(weight):
 drone_shipping_cost = drone_shipping(1.5)
 print("The drone shipping cost is: ", drone_shipping_cost)
 
-
+#Determine best shipping method and cost
 def best_shipping(weight):
   ground  = ground_shipping(weight)
   drone   = drone_shipping(weight)
@@ -45,7 +47,7 @@ def best_shipping(weight):
     
   print("The best shipping method for your package of weight %.2f is %s Shipping. It costs you $%.2f" %(weight,method,cost))
   
-      
+#Call method       
 shipping_cost = best_shipping(4.8)
 print(shipping_cost)
 
